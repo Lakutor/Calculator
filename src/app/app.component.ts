@@ -19,6 +19,10 @@ export class AppComponent {
 
   dividir(): void {}
 
+  igual(): void{
+
+  }
+
   reiniciar(): void {
     this.pantalla = 0;
   }
