@@ -16,23 +16,32 @@ export class AppComponent {
     this.pantalla = 0; // Borro lo que está en pantalla
   }
 
-  restar(): void {}
+  restar(): void {
+    this.memoria = this.pantalla; // Copio la variable de pantalla hacia la memoria
+    this.operacion = 'restar'; // Guardo la palabra clave para la operaciòn
+    this.pantalla = 0; // Borro lo que esta en pantalla
+  }
 
-  multiplicar(): void {}
+
+
+  multiplicar(): void { }
 
   dividir(): void {
 
   }
 
-  igual(): void{
-    if(this.operacion === 'sumar'){
+  igual(): void {
+    if (this.operacion === 'sumar') {
       this.pantalla = this.memoria + this.pantalla;
+    }
+    if (this.operacion === 'restar') {
+      this.pantalla = this.memoria - this.pantalla;
     }
   }
 
   reiniciar(): void {
     this.pantalla = 0;
-    this.memoria=0;
+    this.memoria = 0;
   }
 
   // Eventos del teclado
