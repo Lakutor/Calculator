@@ -7,24 +7,32 @@ import { Component, HostListener } from '@angular/core';
 })
 export class AppComponent {
   pantalla = 0;
+  memoria = 0;
+  operacion = '';
 
   sumar(): void {
-    this.pantalla++;
-    console.log(this.pantalla);
+    this.memoria = this.pantalla; // Copio la variable de pantalla hacia la memoria
+    this.operacion = 'sumar'; // Guardo la palabra clave para la operación
+    this.pantalla = 0; // Borro lo que está en pantalla
   }
 
   restar(): void {}
 
   multiplicar(): void {}
 
-  dividir(): void {}
+  dividir(): void {
+
+  }
 
   igual(): void{
-
+    if(this.operacion === 'sumar'){
+      this.pantalla = this.memoria + this.pantalla;
+    }
   }
 
   reiniciar(): void {
     this.pantalla = 0;
+    this.memoria=0;
   }
 
   // Eventos del teclado
