@@ -36,7 +36,10 @@ export class AppComponent {
     this.pantalla = 0; // Borro lo que esta en pantalla
   }
 
-  signo(){}
+  signo(): void {
+    this.pantalla = this.pantalla * -1
+    }
+
 
 
   igual(): void {
