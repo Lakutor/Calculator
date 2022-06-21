@@ -22,8 +22,6 @@ export class AppComponent {
     this.pantalla = 0; // Borro lo que esta en pantalla
   }
 
-
-
   multiplicar(): void {
     this.memoria = this.pantalla; // Copio la variable de la pantalla hacia la memoria
     this.operacion = 'multiplicar' ; // Guardo la palabra clave para la operacion
@@ -38,9 +36,7 @@ export class AppComponent {
 
   signo(): void {
     this.pantalla = this.pantalla * -1
-    }
-
-
+  }
 
   igual(): void {
     if (this.operacion === 'sumar') {
@@ -58,12 +54,8 @@ export class AppComponent {
     if (this.operacion === 'dividir') {
       this.operacion = 'resultado'
       this.pantalla = this.memoria / this.pantalla;
-      }
-
-
-
-
-
+    }
+    this.memoria=0;
   }
 
   reiniciar(): void {

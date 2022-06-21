@@ -5,8 +5,12 @@
         <div>
           <span class="pl-2 text-blue-200 font-bold">Polar-C100</span>
         </div>
-        <div class="text-right p-4 m-2 bg-gray-200 rounded ">
-          <span class="text-4xl">{{pantalla}}</span>
+        <div class="text-right p-4 m-2 bg-gray-200 rounded h-24">
+          <p class="h-6">
+            <span>{{operacion}}</span>
+            <span *ngIf="memoria != 0" class="pl-4">{{memoria}}</span>
+          </p>
+          <p class="text-4xl">{{pantalla}}</p>
         </div>
         <div class="grid grid-cols-5 select-none" id="teclado">
           <div id="columna_1">
