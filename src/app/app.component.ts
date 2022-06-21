@@ -36,6 +36,8 @@ export class AppComponent {
     this.pantalla = 0; // Borro lo que esta en pantalla
   }
 
+  signo(){}
+
 
   igual(): void {
     if (this.operacion === 'sumar') {
