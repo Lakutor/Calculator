@@ -24,11 +24,18 @@ export class AppComponent {
 
 
 
-  multiplicar(): void { }
+  multiplicar(): void {
+    this.memoria = this.pantalla; // Copio la variable de la pantalla hacia la memoria
+    this.operacion = 'multiplicar' ; // Guardo la palabra clave para la operacion
+    this.pantalla = 0; // Borro lo que esta en pantalla
+  }
 
   dividir(): void {
-
+    this.memoria = this.pantalla; // Copio la variable de la pantalla hacia la memoria
+    this.operacion = 'dividir' ; // Guardo la palabra clave para la operacion
+    this.pantalla = 0; // Borro lo que esta en pantalla
   }
+
 
   igual(): void {
     if (this.operacion === 'sumar') {
@@ -37,6 +44,16 @@ export class AppComponent {
     if (this.operacion === 'restar') {
       this.pantalla = this.memoria - this.pantalla;
     }
+    if (this.operacion === 'multiplicar') {
+      this.pantalla = this.memoria * this.pantalla;
+    }
+    if (this.operacion === 'dividir') {this.pantalla;
+       this.pantalla = this.memoria /  this.pantalla
+      }
+
+
+
+
   }
 
   reiniciar(): void {
