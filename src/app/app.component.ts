@@ -45,16 +45,21 @@ export class AppComponent {
   igual(): void {
     if (this.operacion === 'sumar') {
       this.pantalla = this.memoria + this.pantalla;
+      this.operacion = 'resultado'
     }
     if (this.operacion === 'restar') {
       this.pantalla = this.memoria - this.pantalla;
+      this.operacion = 'resultado'
     }
     if (this.operacion === 'multiplicar') {
       this.pantalla = this.memoria * this.pantalla;
+      this.operacion = 'resultado'
     }
-    if (this.operacion === 'dividir') {this.pantalla;
-       this.pantalla = this.memoria /  this.pantalla
+    if (this.operacion === 'dividir') {
+      this.operacion = 'resultado'
+      this.pantalla = this.memoria / this.pantalla;
       }
+
 
 
 
