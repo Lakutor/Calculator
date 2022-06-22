@@ -11,24 +11,38 @@ export class AppComponent {
   operacion = '';
 
   sumar(): void {
+    if(this.operacion !== '') {
+      this.igual()
+    }
     this.memoria = this.pantalla; // Copio la variable de pantalla hacia la memoria
     this.operacion = 'sumar'; // Guardo la palabra clave para la operación
     this.pantalla = 0; // Borro lo que está en pantalla
   }
 
   restar(): void {
+    if(this.operacion !== ''){
+      this.igual()
+    }
     this.memoria = this.pantalla; // Copio la variable de pantalla hacia la memoria
     this.operacion = 'restar'; // Guardo la palabra clave para la operaciòn
     this.pantalla = 0; // Borro lo que esta en pantalla
   }
 
+
+
   multiplicar(): void {
+    if(this.operacion !== ''){
+      this.igual()
+    }
     this.memoria = this.pantalla; // Copio la variable de la pantalla hacia la memoria
     this.operacion = 'multiplicar' ; // Guardo la palabra clave para la operacion
     this.pantalla = 0; // Borro lo que esta en pantalla
   }
 
   dividir(): void {
+    if(this.operacion !== ''){
+      this.igual()
+    }1
     this.memoria = this.pantalla; // Copio la variable de la pantalla hacia la memoria
     this.operacion = 'dividir' ; // Guardo la palabra clave para la operacion
     this.pantalla = 0; // Borro lo que esta en pantalla
@@ -36,26 +50,27 @@ export class AppComponent {
 
   signo(): void {
     this.pantalla = this.pantalla * -1
-  }
+    }
+
+
 
   igual(): void {
     if (this.operacion === 'sumar') {
       this.pantalla = this.memoria + this.pantalla;
-      this.operacion = 'resultado'
+      this.operacion = ''
     }
     if (this.operacion === 'restar') {
       this.pantalla = this.memoria - this.pantalla;
-      this.operacion = 'resultado'
+      this.operacion = ''
     }
     if (this.operacion === 'multiplicar') {
       this.pantalla = this.memoria * this.pantalla;
-      this.operacion = 'resultado'
+      this.operacion = ''
     }
     if (this.operacion === 'dividir') {
-      this.operacion = 'resultado'
+      this.operacion = ''
       this.pantalla = this.memoria / this.pantalla;
     }
-    this.memoria=0;
   }
 
   reiniciar(): void {
